@@ -43,7 +43,7 @@ default:
 const b=D[S-1],u=D[S-2];
 let r=0;
 if(o==16)r=(u+b)|0;else if(o==17)r=(u-b)|0;else if(o==18)r=Math.imul(u,b);
-else if(o<23){if(!b){e=4;break run}r=o==19?(u/b)|0:o==20?(u%b)|0:o==21?Math.floor((u>>>0)/(b>>>0))|0:(u>>>0)%(b>>>0)|0}
+else if(o<23){if(!b){e=4;break run}r=o==19?(u/b)|0:o==20?(u%b)|0:o==21?((u>>>0)/(b>>>0))|0:(u>>>0)%(b>>>0)|0}
 else if(o==24)r=u&b;else if(o==25)r=u|b;else if(o==26)r=u^b;
 else if(o==28)r=u<<(b&31);else if(o==29)r=u>>(b&31);else if(o==30)r=(u>>>(b&31))|0;
 else if(o==32)r=u==b?1:0;else if(o==33)r=u<b?1:0;else r=(u>>>0)<(b>>>0)?1:0;
